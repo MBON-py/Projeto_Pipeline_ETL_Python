@@ -5,5 +5,5 @@ import pandas as pd
 from ydata_profiling import ProfileReport
 
 df = pd.read_csv('precos-glp-02_2025_edit.csv', sep=";", encoding="utf-8", skipinitialspace=True, decimal=",", engine='python')
-profile = ProfileReport(df, title="Profiling Report")
+profile = ProfileReport(df, title="Análise das vendas de GLP no Brasil em FEV-25")
 profile.to_file("output.html")
