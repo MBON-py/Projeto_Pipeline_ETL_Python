@@ -30,18 +30,14 @@ def validar_csv(df):
     # Renomeia as colunas do DataFrame para corresponder às chaves do modelo
     df.rename(columns=colunas_para_mapear, inplace=True)
 
-    # Substitui células vazias por None
-    df = df.where(pd.notnull(df), None)
+    # Remove linhas completamente vazias
+    df.dropna(how="all", inplace=True)
 
     for index, row in df.iterrows():
         try:
-            # Ajusta os dados antes da validação
-            row["data_coleta"] = row["data_coleta"].replace("/", "-")  # Converte data para o formato dd-mm-aaaa
-            row["valor_venda"] = float(row["valor_venda"].replace(",", "."))  # Converte valor para float
-            if row["valor_compra"] and row["valor_compra"].strip():  # Converte valor_compra para float se não estiver vazio
-                row["valor_compra"] = float(row["valor_compra"].replace(",", "."))
-            else:
-                row["valor_compra"] = None  # Define como None se estiver vazio
+            # Verifica se a linha está vazia ou nula
+            if row.isnull().all():
+                continue  # Ignora linhas completamente vazias
 
             # Converte os dados para dicionário e valida
             usuario_validado = ValidadorCSV.parse_obj(row.to_dict())
