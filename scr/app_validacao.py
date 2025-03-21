@@ -1,6 +1,19 @@
 import streamlit as st
 import pandas as pd
 from validador import ValidadorCSV  # Importa a classe de validação
+import psycopg2
+from sqlalchemy import create_engine 
+
+def salvar_no_postgresql(df):
+    """Função para salvar os dados validados no PostgreSQL."""
+    try:
+        engine = create_engine("postgresql://usuario:senha@localhost:5432/seu_banco")
+        df.to_sql("usuarios", engine, if_exists="append", index=False)
+        return True
+    except Exception as e:
+        st.error(f"Erro ao salvar no banco de dados: {e}")
+        return False
+
 
 def validar_csv(df):
     """Valida cada linha do CSV usando Pydantic e retorna erros encontrados."""
