@@ -40,6 +40,9 @@ O projeto consiste em uma pipeline de dados que realiza as seguintes etapas:
 5.  **Consumo no Power BI**: O Power BI se conecta ao PostgreSQL para criar visualizações e dashboards.
     
 
+## Artigo sobre o projeto: 
+[Do Caos à Clareza: Como Garantir Qualidade de Dados com Python e PostgreSQL](https://medium.com/@mariabenussy/do-caos-%C3%A0-clareza-como-garantir-qualidade-de-dados-com-python-e-postgresql-3ecb0c078841)
+
 ----------
 
 ## Ferramentas e Bibliotecas Utilizadas
@@ -173,6 +176,10 @@ Aqui estão os links para a documentação das bibliotecas utilizadas:
     
 -   [Power BI](https://learn.microsoft.com/en-us/power-bi/)
     
+----------
+## Fonte dos dados: 
+
+[GLP P13 - Fevereiro/2025](https://dados.gov.br/dados/conjuntos-dados/serie-historica-de-precos-de-combustiveis-e-de-glp)
 
 ----------
 
