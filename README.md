@@ -41,7 +41,7 @@ O projeto consiste em uma pipeline de dados que realiza as seguintes etapas:
     
 
 ## Artigo sobre o projeto: 
-[Do Caos à Clareza: Como Garantir Qualidade de Dados com Python e PostgreSQL](https://medium.com/@mariabenussy/do-caos-%C3%A0-clareza-como-garantir-qualidade-de-dados-com-python-e-postgresql-3ecb0c078841)
+[Do Caos à Clareza: Domine a Qualidade de Dados com Python, PostgreSQL e Ferramentas Modernas](https://medium.com/@mariabenussy/do-caos-%C3%A0-clareza-como-garantir-qualidade-de-dados-com-python-e-postgresql-3ecb0c078841)
 
 ----------
 
